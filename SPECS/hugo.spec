@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:		hugo
-Version:	0.18.1
+Version:	0.19
 Release:	0%{?dist}
 Summary:	A Fast and Flexible Static Site Generator
 
@@ -44,5 +44,7 @@ cp bin/hugo %{buildroot}%{_bindir}
 #%{_userunitdir}/syncthing.service
 
 %changelog
+* Mon Feb 27 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.19-0
+- New release 0.19
 * Sat Feb 11 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.18.1-0
 - Initial version of the rpm
