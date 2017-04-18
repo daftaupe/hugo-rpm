@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:		hugo
-Version:	0.20
+Version:	0.20.1
 Release:	0%{?dist}
 Summary:	A Fast and Flexible Static Site Generator
 
@@ -44,6 +44,8 @@ cp bin/hugo %{buildroot}%{_bindir}
 #%{_userunitdir}/syncthing.service
 
 %changelog
+* Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.1-0
+- New release 0.20.1
 * Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20-0
 - New release 0.20
 * Mon Feb 27 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.19-0
