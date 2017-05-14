@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:		hugo
-Version:	0.20.2
+Version:	0.20.3
 Release:	0%{?dist}
 Summary:	A Fast and Flexible Static Site Generator
 
@@ -28,22 +28,16 @@ go get github.com/spf13/hugo
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-#mkdir -p %{buildroot}%{_unitdir}
-#mkdir -p %{buildroot}%{_userunitdir}
 
 cp bin/hugo %{buildroot}%{_bindir}
-#cp etc/linux-systemd/system/syncthing\@.service  %{buildroot}%{_unitdir}
-#cp etc/linux-systemd/system/syncthing-resume.service  %{buildroot}%{_unitdir}
-#cp etc/linux-systemd/user/syncthing.service %{buildroot}%{_userunitdir}
 
 
 %files
 %{_bindir}/hugo
-#%{_unitdir}/syncthing@.service
-#%{_unitdir}/syncthing-resume.service
-#%{_userunitdir}/syncthing.service
 
 %changelog
+* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.3-0
+- New release 0.20.3
 * Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.2-0
 - New release 0.20.2
 * Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.1-0
