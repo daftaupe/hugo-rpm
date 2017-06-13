@@ -1,13 +1,13 @@
 %define debug_package %{nil}
-Name:		hugo
-Version:	0.22
-Release:	0%{?dist}
-Summary:	A Fast and Flexible Static Site Generator
+Name:           hugo
+Version:        0.22.1
+Release:        0%{?dist}
+Summary:        A Fast and Flexible Static Site Generator
 
-Group:		Applications/System
-License:	Apache 2.0
-URL:		https://github.com/spf13/hugo
-Source0:	https://github.com/spf13/hugo/archive/v%{version}.tar.gz
+Group:          Applications/System
+License:        Apache 2.0
+URL:            https://github.com/spf13/hugo
+Source0:        https://github.com/spf13/hugo/archive/v%{version}.tar.gz
 
 BuildRequires:  git golang
 
@@ -36,8 +36,12 @@ cp bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Tue Jun 13 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.22.1-0
+- New release 0.22.1
+
 * Mon Jun 12 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.22-0
 - New release 0.22
+
 * Thu May 25 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.21-0
 - New release 0.21
 * Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.7-0
