@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:           hugo
-Version:        0.22.1
+Version:        0.23
 Release:        0%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 
@@ -20,11 +20,11 @@ Hugo is a static HTML and CSS website generator written in Go. It is optimized f
 %build
 export GOPATH="$(pwd)"
 export PATH=$PATH:"$(pwd)"/bin
-mkdir -p src/github.com/spf13/
-ln -s "$(pwd)" src/github.com/spf13/hugo
-cd src/github.com/spf13/hugo
+mkdir -p src/github.com/gohugoio/
+ln -s "$(pwd)" src/github.com/gohugoio/hugo
+cd src/github.com/gohugoio/hugo
 make govendor
-go get github.com/spf13/hugo
+go get github.com/gohugoio/hugo
 
 %install
 mkdir -p %{buildroot}%{_bindir}
@@ -36,12 +36,12 @@ cp bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Fri Jun 16 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.23-0
+- New release 0.23
+- Update to the new URL of the project on github
 * Tue Jun 13 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.22.1-0
 - New release 0.22.1
-
-* Mon Jun 12 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.22-0
 - New release 0.22
-
 * Thu May 25 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.21-0
 - New release 0.21
 * Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.7-0
