@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:           hugo
-Version:        0.23
+Version:        0.24
 Release:        0%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 
@@ -36,31 +36,33 @@ cp bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
-* Fri Jun 16 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.23-0
+* Thu Jun 22 2017 daftaupe <daftaupe@protonmail.com> 0.24-0
+- New release 0.24
+* Fri Jun 16 2017 daftaupe <daftaupe@protonmail.com> 0.23-0
 - New release 0.23
 - Update to the new URL of the project on github
-* Tue Jun 13 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.22.1-0
+* Tue Jun 13 2017 daftaupe <daftaupe@protonmail.com> 0.22.1-0
 - New release 0.22.1
 - New release 0.22
-* Thu May 25 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.21-0
+* Thu May 25 2017 daftaupe <daftaupe@protonmail.com> 0.21-0
 - New release 0.21
-* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.7-0
+* Sun May 14 2017 daftaupe <daftaupe@protonmail.com> 0.20.7-0
 - New release 0.20.7
-* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.6-0
+* Sun May 14 2017 daftaupe <daftaupe@protonmail.com> 0.20.6-0
 - New release 0.20.6
-* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.5-0
+* Sun May 14 2017 daftaupe <daftaupe@protonmail.com> 0.20.5-0
 - New release 0.20.5
-* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.4-0
+* Sun May 14 2017 daftaupe <daftaupe@protonmail.com> 0.20.4-0
 - New release 0.20.4
-* Sun May 14 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.3-0
+* Sun May 14 2017 daftaupe <daftaupe@protonmail.com> 0.20.3-0
 - New release 0.20.3
-* Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.2-0
+* Tue Apr 18 2017 daftaupe <daftaupe@protonmail.com> 0.20.2-0
 - New release 0.20.2
-* Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20.1-0
+* Tue Apr 18 2017 daftaupe <daftaupe@protonmail.com> 0.20.1-0
 - New release 0.20.1
-* Tue Apr 18 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.20-0
+* Tue Apr 18 2017 daftaupe <daftaupe@protonmail.com> 0.20-0
 - New release 0.20
-* Mon Feb 27 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.19-0
+* Mon Feb 27 2017 daftaupe <daftaupe@protonmail.com> 0.19-0
 - New release 0.19
-* Sat Feb 11 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.18.1-0
+* Sat Feb 11 2017 daftaupe <daftaupe@protonmail.com> 0.18.1-0
 - Initial version of the rpm
