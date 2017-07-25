@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:           hugo
-Version:        0.25
+Version:        0.25.1
 Release:        0%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 
@@ -36,6 +36,9 @@ cp bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Tue Jul 25 2017 daftaupe <daftaupe@protonmail.com> 0.25.1-0
+- New release 0.25.1
+
 * Tue Jul 25 2017 daftaupe <daftaupe@protonmail.com> 0.25-0
 - New release 0.25
 
