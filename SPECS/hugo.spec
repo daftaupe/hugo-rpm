@@ -6,8 +6,8 @@ Summary:        A Fast and Flexible Static Site Generator
 
 Group:          Applications/System
 License:        Apache 2.0
-URL:            https://github.com/spf13/hugo
-Source0:        https://github.com/spf13/hugo/archive/v%{version}.tar.gz
+URL:            https://github.com/gohugoio/hugo
+Source0:        https://github.com/gohugoio/hugo/archive/v%{version}.tar.gz
 
 BuildRequires:  git golang
 
