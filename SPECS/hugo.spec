@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:           hugo
-Version:        0.30.1
+Version:        0.30.2
 Release:        0%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 
@@ -23,8 +23,6 @@ export PATH=$PATH:"$(pwd)"/bin
 mkdir -p src/github.com/gohugoio/
 ln -s "$(pwd)" src/github.com/gohugoio/hugo
 cd src/github.com/gohugoio/hugo
-#make govendor
-#go get github.com/gohugoio/hugo
 go get -u github.com/kardianos/govendor
 go get github.com/magefile/mage
 mage hugo
@@ -40,6 +38,9 @@ cp bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Thu Oct 19 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.30.2-0
+- New release 0.30.2
+
 * Thu Oct 19 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.30.1-0
 - New release 0.30.1
 - Adapt to mage build process
