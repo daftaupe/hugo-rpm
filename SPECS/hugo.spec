@@ -15,15 +15,18 @@ BuildRequires:  git golang
 Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, easy use and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
 
 %prep
-%setup -q 
+mkdir -p %{_builddir}/src/github.com/gohugoio/
+cd %{_builddir}/src/github.com/gohugoio/
+tar -xvzf %{_sourcedir}/v%{version}.tar.gz 
+mv hugo-%{version} hugo
+cd hugo
 
 %build
-export GOPATH="$(pwd)"
-export PATH=$PATH:"$(pwd)"/bin
-mkdir -p src/github.com/gohugoio/
-ln -s "$(pwd)" src/github.com/gohugoio/hugo
-cd src/github.com/gohugoio/hugo
-go get -u github.com/kardianos/govendor
+export GOPATH="%{_builddir}"
+export PATH=$PATH:"%{_builddir}"/bin
+go get -u github.com/golang/dep/cmd/dep
+cd %{_builddir}/src/github.com/gohugoio/hugo
+dep ensure
 go get github.com/magefile/mage
 mage hugo
 mage install
@@ -31,7 +34,7 @@ mage install
 %install
 mkdir -p %{buildroot}%{_bindir}
 
-cp bin/hugo %{buildroot}%{_bindir}
+cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
 
 
 %files
@@ -43,6 +46,7 @@ cp bin/hugo %{buildroot}%{_bindir}
 
 * Thu Oct 19 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.30.2-0
 - New release 0.30.2
+- Adapt the build process to dep
 
 * Thu Oct 19 2017 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.30.1-0
 - New release 0.30.1
