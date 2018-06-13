@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 Name:           hugo
-Version:        0.42
+Version:        0.42.1
 Release:        1%{?dist}
 Summary:        A Fast and Flexible Static Site Generator
 
@@ -41,6 +41,9 @@ cp %{_builddir}/bin/hugo %{buildroot}%{_bindir}
 %{_bindir}/hugo
 
 %changelog
+* Wed Jun 13 2018 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.42.1-1
+- New release 0.42.1
+
 * Tue Jun 12 2018 Pierre-Alain TORET <pierre-alain.toret@protonmail.com> 0.42-1
 - New release 0.42
 
